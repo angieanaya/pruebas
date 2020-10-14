@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//complete routes to the pokemon controller
+Route::resource('pokemons', 'App\Http\Controllers\PokemonController');
