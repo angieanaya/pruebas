@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //complete routes to the pokemon controller
 Route::resource('pokemons', 'App\Http\Controllers\PokemonController');
+
+Route::put('pokemons', 'PokemonController@update')->name('pokemons.update');

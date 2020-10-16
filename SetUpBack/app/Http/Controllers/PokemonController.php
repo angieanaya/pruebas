@@ -75,9 +75,19 @@ class PokemonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pokemon $pokemon)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+        ]);
+        $pokemon->name = $request->name();
+
+        $pokemon->save();
+        
+        return response()->json([
+            'message' => 'pokemon updated!',
+            'pokemon' => $pokemon
+        ]);
     }
 
     /**
