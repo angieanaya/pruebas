@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-export const API_BASE_URL = 'http://localhost:8000/api';
+import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+export const API_BASE_URL = 'http://localhost:8000/api';
+
 
 ReactDOM.render(
   <BrowserRouter>

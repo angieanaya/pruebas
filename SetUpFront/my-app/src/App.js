@@ -11,6 +11,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import CreatePokemon from "./Components/create-pokemon";
+import RDPatronato from "./Components/RDPatronato";
 
 function App() {
   return (<Router>
@@ -35,7 +36,7 @@ function App() {
           <Col md={12}>
             <div className="wrapper">
               <Switch>
-                <Route exact path='/' component={CreatePokemon} />
+                <Route exact path='/' component={RDPatronato} />
                 <Route path="/create-pokemon" component={CreatePokemon} />
               </Switch>
             </div>
